@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "tailwindcss";
+
+
+:root {
+  --primary-blue: #002147;
+  --cambridge-teal: #8ee8d8;
+}
+
+/* Base resets to make it look professional like Horizon/Cambridge */
+body {
+  @apply bg-white text-slate-900 antialiased;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+h1, h2, h3, h4 {
+  @apply font-bold tracking-tight text-[#002147];
+}
+
+/* Custom button hover effect for the school site */
+.btn-primary {
+  @apply bg-[#002147] text-white px-6 py-2 rounded-md transition-all hover:bg-blue-900 active:scale-95;
+}
