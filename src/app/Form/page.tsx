@@ -14,7 +14,7 @@ export default function AdmissionForm() {
     <main className="min-h-screen bg-[#f8fafc] py-20 relative overflow-hidden">
       {/* Decorative Background Elements */}
       <div className="absolute top-0 right-0 text-[15rem] font-bold text-slate-200/40 select-none pointer-events-none -z-0">
-        APPLY
+        APPLY NOW
       </div>
       <div className="absolute bottom-0 left-10 w-96 h-96 bg-blue-100/50 rounded-full blur-3xl -z-0" />
 
