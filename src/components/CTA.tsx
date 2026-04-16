@@ -1,88 +1,89 @@
 "use client";
-import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function CTA() {
   return (
-    <section className="py-20 px-6 bg-white">
-      <div className="container mx-auto max-w-6xl">
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          className="relative overflow-hidden rounded-[2.5rem] bg-[#001529] shadow-2xl shadow-blue-900/20"
-        >
-          {/* Background Decorative Elements */}
-          <div className="absolute top-0 right-0 w-1/3 h-full bg-[#8EE8D8]/10 skew-x-12 translate-x-10 hidden lg:block" />
-          <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-blue-600/20 rounded-full blur-[80px]" />
+    <section className="py-24 px-6 bg-white">
+      <div className="container mx-auto max-w-7xl">
+        <div className="relative overflow-hidden rounded-[3.5rem] bg-[#0B1F3A] shadow-[0_50px_100px_-20px_rgba(11,31,58,0.3)]">
+          
+          {/* 🏛️ Editorial Watermark */}
+          <div className="absolute top-0 right-0 text-[15rem] font-black text-white/5 select-none pointer-events-none tracking-tighter leading-none translate-x-10 -translate-y-10">
+            2026
+          </div>
 
-          <div className="relative z-10 grid lg:grid-cols-5 items-center">
+          {/* Background Decorative Accents */}
+          <div className="absolute top-0 right-0 w-1/3 h-full bg-[#C59D2A]/5 skew-x-12 translate-x-20 hidden lg:block" />
+          <div className="absolute -bottom-24 -left-24 w-80 h-80 bg-[#C59D2A]/10 rounded-full blur-[100px]" />
+
+          <div className="relative z-10 grid lg:grid-cols-12 items-stretch">
             
-            {/* Content Section */}
-            <div className="lg:col-span-3 p-10 md:p-16">
-              <motion.span 
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.2 }}
-                className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-[#8EE8D8] uppercase border border-[#8EE8D8]/30 rounded-full"
-              >
-                Enrollment Phase I
-              </motion.span>
+            {/* 🔹 MAIN CONTENT SECTION */}
+            <div className="lg:col-span-7 p-10 md:p-20">
+              <div className="inline-flex items-center gap-3 mb-8">
+                <span className="w-8 h-[1px] bg-[#C59D2A]" />
+                <span className="text-[#C59D2A] text-[10px] font-black uppercase tracking-[0.5em]">
+                  Enrollment Phase I
+                </span>
+              </div>
               
-              <h2 className="text-4xl md:text-5xl font-serif font-bold text-white leading-tight mb-6">
+              <h2 className="text-5xl md:text-7xl font-serif font-bold text-white leading-[0.9] tracking-tighter mb-8">
                 Secure Your Child’s <br />
-                <span className="italic text-[#8EE8D8]">Future Today.</span>
+                <span className="italic font-medium text-gray-400">Future Today.</span>
               </h2>
               
-              <p className="text-slate-400 text-lg mb-10 max-w-md">
-                Join a community of scholars, innovators, and leaders. 
-                Applications for the 2026 Academic Session are now being prioritized.
+              <p className="text-gray-400 text-xl font-medium mb-12 max-w-lg leading-relaxed">
+                Join an elite community of scholars and leaders. 
+                Applications for the <span className="text-white">2026 Academic Session</span> are now being prioritized for early review.
               </p>
 
-              <div className="flex flex-wrap gap-4">
-                <button className="px-10 py-4 bg-[#8EE8D8] text-[#001529] font-bold rounded-full hover:shadow-[0_0_20px_rgba(142,232,216,0.4)] transition-all transform hover:-translate-y-1 active:scale-95">
-                  Start Online Application
+              <div className="flex flex-col sm:flex-row gap-6">
+                <button className="px-12 py-6 bg-[#C59D2A] text-white font-black text-xs uppercase tracking-[0.3em] rounded-full hover:bg-white hover:text-[#0B1F3A] transition-all duration-500 shadow-xl">
+                  Begin Application
                 </button>
-                <button className="px-10 py-4 border border-white/20 text-white font-semibold rounded-full hover:bg-white/5 transition-all">
-                  Download Prospectus
+                <button className="px-12 py-6 border border-white/10 text-white font-black text-xs uppercase tracking-[0.3em] rounded-full hover:bg-white/5 transition-all duration-500">
+                  Request Prospectus
                 </button>
               </div>
             </div>
 
-            {/* Support / Help Section (The "Bento" Side) */}
-            <div className="lg:col-span-2 bg-white/5 backdrop-blur-sm h-full p-10 md:p-16 border-l border-white/10 flex flex-col justify-center">
-              <h3 className="text-white font-bold text-xl mb-6">Need Assistance?</h3>
+            {/* 🔹 SUPPORT & DETAILS (Bento-Style Sidebar) */}
+            <div className="lg:col-span-5 bg-white/[0.03] backdrop-blur-md p-10 md:p-20 border-t lg:border-t-0 lg:border-l border-white/10 flex flex-col justify-center">
+              <h3 className="text-white font-serif font-bold text-3xl mb-10 italic">Consultation Hub</h3>
               
-              <div className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-[#8EE8D8]/20 flex items-center justify-center text-[#8EE8D8] text-xl">
-                    📞
+              <div className="space-y-10">
+                <div className="group flex items-start gap-6">
+                  <div className="w-12 h-12 rounded-full border border-[#C59D2A]/30 flex items-center justify-center text-[#C59D2A] text-xl group-hover:bg-[#C59D2A] group-hover:text-white transition-all duration-500">
+                    🏛️
                   </div>
                   <div>
-                    <p className="text-slate-400 text-xs uppercase font-bold tracking-widest">Admissions Helpline</p>
-                    <p className="text-white font-semibold">+92 51 123 4567</p>
+                    <p className="text-gray-500 text-[10px] uppercase font-black tracking-[0.3em] mb-1">Admissions Helpline</p>
+                    <p className="text-white text-lg font-bold tracking-tight">+92 51 123 4567</p>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-[#8EE8D8]/20 flex items-center justify-center text-[#8EE8D8] text-xl">
+                <div className="group flex items-start gap-6">
+                  <div className="w-12 h-12 rounded-full border border-[#C59D2A]/30 flex items-center justify-center text-[#C59D2A] text-xl group-hover:bg-[#C59D2A] group-hover:text-white transition-all duration-500">
                     📅
                   </div>
                   <div>
-                    <p className="text-slate-400 text-xs uppercase font-bold tracking-widest">Campus Tour</p>
-                    <p className="text-white font-semibold">Monday — Friday</p>
+                    <p className="text-gray-500 text-[10px] uppercase font-black tracking-[0.3em] mb-1">Campus Tour</p>
+                    <p className="text-white text-lg font-bold tracking-tight">Mon — Fri | 09:00 - 14:00</p>
                   </div>
                 </div>
 
-                <div className="pt-6 border-t border-white/10">
-                  <p className="text-slate-500 text-xs leading-relaxed italic">
-                    * Limited seats available for O/A Level scholarship programs.
-                  </p>
+                <div className="pt-10 border-t border-white/5">
+                  <div className="bg-[#C59D2A]/10 border border-[#C59D2A]/20 p-6 rounded-2xl">
+                    <p className="text-[#C59D2A] text-xs leading-relaxed font-bold italic">
+                      * Note: Limited seats remain for the O/A Level high-achiever scholarship programs. 
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
 
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

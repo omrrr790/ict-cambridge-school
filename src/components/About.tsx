@@ -1,123 +1,117 @@
 "use client";
-import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function About() {
   return (
-    <section id="about" className="relative py-24 bg-white overflow-hidden">
+    <section id="about" className="relative py-32 bg-white overflow-hidden">
+      {/* 🏛️ Background Architectural Accents */}
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden -z-10">
+        <div className="absolute top-20 left-[10%] w-[500px] h-[500px] bg-[#C59D2A]/5 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 right-0 w-1/3 h-full bg-[#0B1F3A]/[0.01] skew-x-12 translate-x-20" />
+      </div>
+
       <div className="container mx-auto px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-12 gap-20 items-center">
           
-          {/* LEFT: The Image Composition (Visual Storytelling) */}
-<div className="relative">
-  {/* Main Institute Image */}
-  <motion.div 
-    initial={{ opacity: 0, x: -50 }}
-    whileInView={{ opacity: 1, x: 0 }}
-    viewport={{ once: true }}
-    className="relative z-10 w-full h-[500px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white"
-  >
-    {/* Overlay for that professional deep-blue tint */}
-    <div className="absolute inset-0 bg-[#001529]/10 hover:bg-transparent transition-colors duration-500 z-10" />
-    
-    <img 
-      src="/thomas-park-w9i7wMaM3EE-unsplash.jpg" 
-      alt="ICT Cambridge Main Building"
-      className="w-full h-full object-cover"
-    />
-  </motion.div>
-
-  {/* Floating Secondary Image (AI / Tech / Lab) */}
-  <motion.div 
-    initial={{ opacity: 0, scale: 0.8 }}
-    whileInView={{ opacity: 1, scale: 1 }}
-    viewport={{ once: true }}
-    transition={{ delay: 0.3 }}
-    className="absolute -bottom-10 -right-6 z-20 w-64 h-64 rounded-2xl overflow-hidden shadow-2xl border-8 border-white hidden md:block group"
-  >
-    <div className="absolute inset-0 bg-[#8EE8D8]/20 group-hover:bg-transparent transition-colors duration-300 z-10" />
-    
-    {/* You can use the same image or a different tech-focused one here */}
-    <img 
-      src="/stem-t4l--PnSpCHYKsw-unsplash.jpg" 
-      alt="AI Lab"
-      className="w-full h-full object-cover scale-150 origin-bottom-right" 
-    />
-    
-    <div className="absolute bottom-0 inset-x-0 bg-white/90 backdrop-blur-sm p-3 text-center z-20">
-      <span className="text-[#001529] font-bold text-xs uppercase tracking-widest">
-        AI Learning Lab
-      </span>
-    </div>
-  </motion.div>
-
-  {/* Decorative Background Shape */}
-  <div className="absolute -top-10 -left-10 w-72 h-72 bg-[#8EE8D8]/30 rounded-full blur-3xl -z-0 animate-pulse" />
-</div>
-
-          {/* RIGHT: Content & Stats */}
-          <div className="space-y-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              <span className="text-[#8EE8D8] font-bold tracking-widest uppercase text-sm">
-                Since 2001 — Excellence in Education
-              </span>
-              <h2 className="text-4xl md:text-6xl font-serif font-bold text-[#001529] mt-4 leading-tight">
-                Nurturing Minds <br />
-                <span className="italic text-blue-600">for a Global Future</span>
-              </h2>
-              <p className="mt-6 text-slate-600 text-lg leading-relaxed">
-                ICT Cambridge School is more than just an institution; it is a 
-                launchpad for future leaders. By blending the rigorous 
-                <strong> Cambridge Curriculum</strong> with cutting-edge <strong>AI-integrated 
-                pedagogy</strong>, we ensure our students are prepared for the 
-                challenges of the 21st century.
-              </p>
-            </motion.div>
-
-            {/* Feature Highlights */}
-            <div className="grid sm:grid-cols-2 gap-6">
-              {[
-                { title: "Cambridge Certified", desc: "Official IGCSE & A-Level partner." },
-                { title: "AI-Ready Labs", desc: "Next-gen tech for modern learners." }
-              ].map((feature, i) => (
-                <motion.div 
-                  key={i}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.2 * i }}
-                  className="flex gap-4 items-start"
-                >
-                  <div className="w-10 h-10 rounded-lg bg-[#001529] flex-shrink-0 flex items-center justify-center text-[#8EE8D8]">
-                    ✓
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-[#001529]">{feature.title}</h4>
-                    <p className="text-sm text-slate-500">{feature.desc}</p>
-                  </div>
-                </motion.div>
-              ))}
+          {/* 🔹 LEFT: THE IMAGE COMPOSITION (Premium Frame Style) */}
+          <div className="lg:col-span-6 relative">
+            {/* Main Image with thick editorial border */}
+            <div className="relative z-10 w-full aspect-[4/5] rounded-[2rem] overflow-hidden shadow-[0_40px_80px_-15px_rgba(11,31,58,0.2)] border-[12px] border-white group">
+              <div className="absolute inset-0 bg-[#0B1F3A]/10 group-hover:bg-transparent transition-all duration-700" />
+              <img 
+                src="/thomas-park-w9i7wMaM3EE-unsplash.jpg" 
+                alt="ICT Cambridge Main Campus"
+                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+              />
             </div>
 
-            {/* Signature Stats */}
-            <div className="flex items-center gap-8 pt-6 border-t border-slate-100">
-              <div>
-                <span className="block text-3xl font-bold text-[#001529]">25+</span>
-                <span className="text-xs text-slate-400 uppercase tracking-widest font-semibold">Years Exp</span>
+            {/* Floating Secondary Image Card */}
+            <div className="absolute -bottom-12 -right-6 z-20 w-72 h-72 rounded-[2rem] overflow-hidden shadow-2xl border-[10px] border-white hidden md:block group">
+              <div className="absolute inset-0 bg-[#C59D2A]/10 group-hover:bg-transparent transition-all duration-500 z-10" />
+              <img 
+                src="/stem-t4l--PnSpCHYKsw-unsplash.jpg" 
+                alt="AI Lab Learning"
+                className="w-full h-full object-cover" 
+              />
+              <div className="absolute bottom-0 inset-x-0 bg-[#0B1F3A] p-4 text-center z-20">
+                <span className="text-[#C59D2A] font-black text-[10px] uppercase tracking-[0.3em]">
+                  The Innovation Hub
+                </span>
               </div>
-              <div className="w-px h-12 bg-slate-200" />
-              <div>
-                <span className="block text-3xl font-bold text-[#001529]">100%</span>
-                <span className="text-xs text-slate-400 uppercase tracking-widest font-semibold">Result</span>
+            </div>
+
+            {/* Experience Year Badge */}
+            <div className="absolute top-12 -left-10 z-30 bg-[#C59D2A] text-white p-8 rounded-2xl shadow-xl -rotate-6">
+              <p className="text-[10px] font-black uppercase tracking-widest opacity-80 mb-1">Established</p>
+              <p className="text-4xl font-serif font-bold italic leading-none">2001</p>
+            </div>
+          </div>
+
+          {/* 🔹 RIGHT: EDITORIAL CONTENT */}
+          <div className="lg:col-span-6 space-y-12">
+            <div className="space-y-6">
+              <div className="inline-flex items-center gap-4">
+                <span className="w-12 h-[2px] bg-[#C59D2A]" />
+                <span className="text-[#C59D2A] text-[11px] font-black uppercase tracking-[0.5em]">
+                  The Institution
+                </span>
               </div>
-              <div className="w-px h-12 bg-slate-200" />
-              <button className="text-blue-600 font-bold hover:underline">
-                Our History →
-              </button>
+              
+              <h2 className="text-5xl md:text-8xl font-serif font-bold text-[#0B1F3A] leading-[0.9] tracking-tighter">
+                Nurturing <br />
+                <span className="italic font-medium text-gray-400">Global Leaders.</span>
+              </h2>
+
+              <p className="text-gray-500 text-xl font-medium leading-relaxed max-w-xl">
+                ICT Cambridge School is more than an institution; it is a 
+                <span className="text-[#0B1F3A] font-bold"> premier launchpad </span> 
+                for future leaders. We blend a century of British tradition with 
+                <span className="text-[#C59D2A] font-bold italic"> AI-ready pedagogy </span>
+                to sculpt minds for the 21st century.
+              </p>
+            </div>
+
+            {/* Featured Accolades Grid */}
+            <div className="grid sm:grid-cols-2 gap-10 border-t border-gray-100 pt-10">
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 rounded-full bg-[#C59D2A]" />
+                  <h4 className="font-black text-[11px] uppercase tracking-widest text-[#0B1F3A]">Cambridge Certified</h4>
+                </div>
+                <p className="text-sm text-gray-400 font-medium pl-5 border-l border-gray-100">Official Partner for IGCSE and International A-Levels.</p>
+              </div>
+
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 rounded-full bg-[#C59D2A]" />
+                  <h4 className="font-black text-[11px] uppercase tracking-widest text-[#0B1F3A]">Futuristic Infrastructure</h4>
+                </div>
+                <p className="text-sm text-gray-400 font-medium pl-5 border-l border-gray-100">Equipped with state-of-the-art Robotics and AI Research Labs.</p>
+              </div>
+            </div>
+
+            {/* Performance Stats & CTA */}
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-12 pt-10 border-t border-gray-100">
+              <div className="group">
+                <span className="block text-5xl font-serif font-bold text-[#0B1F3A] group-hover:text-[#C59D2A] transition-colors">25+</span>
+                <span className="text-[10px] text-gray-400 uppercase tracking-[0.3em] font-black">Years of Legacy</span>
+              </div>
+              
+              <div className="group">
+                <span className="block text-5xl font-serif font-bold text-[#0B1F3A] group-hover:text-[#C59D2A] transition-colors">100%</span>
+                <span className="text-[10px] text-gray-400 uppercase tracking-[0.3em] font-black">Academic Results</span>
+              </div>
+
+              <Link 
+                href="/history" 
+                className="inline-flex items-center gap-3 text-[#0B1F3A] font-black text-[11px] uppercase tracking-[0.2em] group hover:text-[#C59D2A] transition-colors"
+              >
+                Our Full History 
+                <span className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center group-hover:border-[#C59D2A] group-hover:bg-[#C59D2A] group-hover:text-white transition-all">
+                  →
+                </span>
+              </Link>
             </div>
           </div>
 
