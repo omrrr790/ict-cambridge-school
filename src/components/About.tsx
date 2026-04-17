@@ -20,7 +20,7 @@ export default function About() {
             <div className="relative z-10 w-full aspect-[4/5] rounded-[2rem] overflow-hidden shadow-[0_40px_80px_-15px_rgba(11,31,58,0.2)] border-[12px] border-white group">
               <div className="absolute inset-0 bg-[#0B1F3A]/10 group-hover:bg-transparent transition-all duration-700" />
               <img 
-                src="/thomas-park-w9i7wMaM3EE-unsplash.jpg" 
+                src="/image 111.avif" 
                 alt="ICT Cambridge Main Campus"
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
               />
@@ -30,7 +30,7 @@ export default function About() {
             <div className="absolute -bottom-12 -right-6 z-20 w-72 h-72 rounded-[2rem] overflow-hidden shadow-2xl border-[10px] border-white hidden md:block group">
               <div className="absolute inset-0 bg-[#C59D2A]/10 group-hover:bg-transparent transition-all duration-500 z-10" />
               <img 
-                src="/stem-t4l--PnSpCHYKsw-unsplash.jpg" 
+                src="/image 20.avif" 
                 alt="AI Lab Learning"
                 className="w-full h-full object-cover" 
               />

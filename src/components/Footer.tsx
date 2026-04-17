@@ -70,11 +70,11 @@ export default function Footer() {
           {[
             {
               title: "Pathways",
-              links: ["Primary Years", "O Levels / IGCSE", "A Levels", "LMS Portal", "Scholarships"]
+              links: ["Primary Years", "O Levels / IGCSE", "A Levels", "Hybrid Classes", "LMS Portal"]
             },
             {
               title: "Institution",
-              links: ["About Us", "Our Campus", "Career", "Latest News", "Contact"]
+              links: ["About Us", "Academics", "Trial / Demo Classes", "Policies", "Contact"]
             }
           ].map((col) => (
             <div key={col.title} className="lg:col-span-2">

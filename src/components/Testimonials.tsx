@@ -64,7 +64,7 @@ export default function Testimonials() {
 
               <div className="relative z-10">
                 <p className="text-gray-500 italic text-lg leading-relaxed mb-12 group-hover:text-gray-200 transition-colors duration-500">
-                  "{t.quote}"
+                  &ldquo;{t.quote}&rdquo;
                 </p>
                 
                 <div className="flex items-center gap-5 pt-8 border-t border-gray-100 group-hover:border-white/10 transition-all duration-500">
