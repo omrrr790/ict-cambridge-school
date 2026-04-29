@@ -123,13 +123,14 @@ export default function Contact() {
           <div className="absolute inset-0 border-[12px] border-white z-10 pointer-events-none rounded-[3rem] shadow-inner" />
           <div className="h-[500px] w-full bg-gray-100 rounded-[3rem] overflow-hidden grayscale contrast-125 transition-all duration-1000 group-hover:grayscale-0">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3321.4321!2d73.0!3d33.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDQyJzAwLjAiTiA3M8KwMDAnMDAuMCJF!5e0!3m2!1sen!2s!4v1625000000000" 
-              width="100%" 
-              height="100%" 
-              style={{ border: 0 }} 
-              allowFullScreen 
-              loading="lazy"
-            ></iframe>
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3320.984725450893!2d73.0368632!3d33.6537916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38df95a042cd7f11%3A0x591671d3d679764b!2sI-10%2F3%20I-10%2C%20Islamabad!5e0!3m2!1sen!2s!4v1714389432000!5m2!1sen!2s"
+  width="100%" 
+  height="100%" 
+  style={{ border: 0 }} 
+  allowFullScreen 
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+></iframe>
           </div>
         </div>
 
